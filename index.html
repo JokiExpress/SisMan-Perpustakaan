@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Manajemen Perpustakaan Modern</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-book-reader"></i> SisMan Perpustakaan</h1>
+            <nav>
+                <a href="#home"><i class="fas fa-home"></i> Beranda</a>
+                <a href="books.html"><i class="fas fa-book"></i> Katalog</a> <!-- Link ke halaman buku -->
+                <a href="#services"><i class="fas fa-cogs"></i> Layanan</a>
+                <a href="#about"><i class="fas fa-info-circle"></i> Tentang Kami</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Selamat Datang di Perpustakaan Digital Kami</h2>
+                <p>Temukan ribuan buku dan sumber daya digital dalam genggaman Anda</p>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Cari buku, penulis, atau kategori...">
+                    <button onclick="searchBook()"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="books">
+            <div class="container">
+                <h2>Katalog Buku Terbaru</h2>
+                <div id="bookList" class="book-grid">
+                    <!-- Book cards will be dynamically added here -->
+                </div>
+                <button id="loadMore" class="btn-primary">Muat Lebih Banyak</button>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2>Layanan Kami</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Akses Mobile</h3>
+                        <p>Baca buku favorit Anda di mana saja dengan aplikasi mobile kami.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-laptop"></i>
+                        <h3>E-Learning</h3>
+                        <p>Akses kursus online dan materi pembelajaran interaktif.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-headphones-alt"></i>
+                        <h3>Audiobook</h3>
+                        <p>Nikmati buku dalam format audio untuk pengalaman yang berbeda.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>Tentang Kami</h2>
+                <p>Kami adalah perpustakaan digital modern yang berkomitmen untuk menyediakan akses mudah ke pengetahuan dan literatur bagi semua orang. Dengan koleksi yang luas dan beragam, kami berusaha untuk memenuhi kebutuhan informasi masyarakat.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Kontak Kami</h2>
+                <p>Jika Anda memiliki pertanyaan atau saran, silakan hubungi kami melalui email di info@perpustakaan.com.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 SisMan Perpustakaan. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        function searchBook() {
+            const query = document.getElementById('searchInput').value;
+            alert(`Mencari buku dengan kata kunci: ${query}`);
+            // Implementasikan logika pencarian di sini
+        }
+    </script>
+</body>
+</html>
